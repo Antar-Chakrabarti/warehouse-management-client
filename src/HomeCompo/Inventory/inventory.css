@@ -1,0 +1,26 @@
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+.inventory-container{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.inventory-title{
+    color: #03C6C7;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    font-family: 'Orelega One', cursive;
+}
+@media only screen and (max-width:700px ) {
+    .card-container{
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+@media only screen and (max-width:517px ) {
+    .card-container{
+    grid-template-columns:1fr; 
+}
+}
