@@ -59,6 +59,11 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
+    padding: 2px 10px;
+    border-radius: 5px;
+    background-color: #46B2E0;
+    color: #fff;
+    font-size: 23px;
 }
 .logo{
     padding: 10px 0;

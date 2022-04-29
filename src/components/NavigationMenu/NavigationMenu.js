@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './navigationMenu.css';
-
+import { FaBars } from 'react-icons/fa';
 const NavigationMenu = () => {
-    const [clicked, setClicked] = useState(true);
+    const [clicked, setClicked] = useState(false);
     const handleNavbar = value => {
         setClicked(!clicked)
     }
@@ -29,7 +29,7 @@ const NavigationMenu = () => {
                         </li>
                     </ul>
                 </div>
-                <button className='nabBtn' onClick={handleNavbar}>XXX</button>
+                <button className='nabBtn' onClick={handleNavbar}><FaBars/></button>
             </nav>
         </>
     );

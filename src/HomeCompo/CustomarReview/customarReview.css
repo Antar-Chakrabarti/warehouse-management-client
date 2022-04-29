@@ -1,0 +1,42 @@
+.review-title{
+    color: #8D3DAF;
+    text-align: center;
+    font-weight: 700;
+    font-size: 35px;
+    font-family: 'Orelega One', cursive;
+}
+.customars{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.customar{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    border: 1px solid #758283;
+    padding: 10px;
+}
+.review-text{
+    font-size: 14px;
+}
+.review-name{
+    font-weight: 600;
+}
+.review-img{
+    width: 50px;
+    height: 50px;
+}
+
+@media only screen and (max-width:700px ) {
+    .customars{
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+}
+}
