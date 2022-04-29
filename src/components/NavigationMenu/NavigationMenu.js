@@ -11,7 +11,7 @@ const NavigationMenu = () => {
         <>
             <nav className='main-nav'>
                 <div className="logo">
-                    <h2>Antar</h2>
+                    <Link to='/'><h2>AmarGari</h2></Link>
                 </div>
                 <div className="menu-link">
                     <ul className={clicked ? 'nav-links' : 'nav-links1'}>
@@ -19,13 +19,13 @@ const NavigationMenu = () => {
                             <Link to='/'>Home</Link>
                         </li>
                         <li>
-                            <Link to='#'>About</Link>
+                            <Link to='/blog'>Blogs</Link>
                         </li>
                         <li>
                             <Link to='#'>Services</Link>
                         </li>
                         <li>
-                            <Link to='#'>contact</Link>
+                            <Link to='/login'>Login</Link>
                         </li>
                     </ul>
                 </div>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Cart from '../Cart/Cart';
 import './Inventory.css';
 
@@ -16,6 +17,9 @@ const Inventory = () => {
                 {
                     cars.map(car => <Cart key={car._id} car={car} />)
                 }
+            </div>
+            <div className="manage">
+                <Link className='manage-link' to='/manageInventory'><button>Manage Inventory</button></Link>
             </div>
         </div>
     );

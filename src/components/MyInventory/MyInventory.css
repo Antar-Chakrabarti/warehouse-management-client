@@ -20,7 +20,7 @@ width: 100%;
 font-size: 17px;
 }
 .item-quantity{
-    
+
 }
 .item-btn{
 width: 100%;
@@ -29,4 +29,19 @@ border: none;
 outline: none;
 background-color: #50DBB4;
 color: #fff;
+}
+.manage{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.manage-link{
+    display: block;
+    margin: 20px auto;
+}
+.manage-link button{
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    background-color: #E03B8B;
 }
