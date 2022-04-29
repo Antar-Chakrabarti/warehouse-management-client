@@ -1,5 +1,10 @@
 import './Cart.css';
+import { useNavigate } from 'react-router-dom';
 const Cart = ({car}) => {
+    const navigate = useNavigate();
+    const handleNavigate =()=>{
+        navigate(`/inventory/${car._id}`)
+    }
     return (
         <div className="cart">
             <img src={car.img} alt="" />
@@ -8,7 +13,7 @@ const Cart = ({car}) => {
             <h5 className='card-price'>price: {car.price}</h5>
             <h6 className='card-quantity'>Quantity: </h6>
             <h5 className='card-supp'>supplier name</h5>
-            <button className='btn btn-primary'>stock update</button>
+            <button onClick={handleNavigate} className='btn btn-primary'>stock update</button>
         </div>
     );
 };

@@ -18,7 +18,7 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
 
 
-
+ console.log(user)
 
     const handleEmailChange = (e) => {
         const emailRegex = /\S+@\S+\.\S+/;
