@@ -5,13 +5,41 @@ import './MyInventory.css';
 const MyInventory = () => {
     const { inventoryId } = useParams();
     const [itemsId, setItemsId] = useState({});
+    const [quantity, setQuantity] = useState({});
     useEffect(() => {
         const url = `http://localhost:5000/items/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItemsId(data))
     }, [])
-    console.log(itemsId)
+
+    const updateQuantity = (e)=>{
+        e.preventDefault();
+        const quantity = e.target.quantity.value;
+        if(!quantity || quantity < 0){
+            return;
+        }
+
+        
+        fetch(`http://localhost:5000/items/${inventoryId}`,{
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({quantity})
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data)
+            window.alert('quantity added')
+            e.target.reset();
+        })
+        
+    }
+    const handleDelever = ()=>{
+
+    }
+
     return (
         <div className='myInventory'>
            <div className="inventory-item">
@@ -19,11 +47,11 @@ const MyInventory = () => {
                <h5 className='item-name'>{itemsId.name}</h5>
                <h5 className='item-price'>Price: ${itemsId.price}</h5>
                <h4 className='item-quantity'>Quantity: {itemsId.quantity}</h4>
-               <button className='item-btn'>delivered</button>
+               <button onClick={handleDelever} className='item-btn'>delivered</button>
            </div>
-           <form>
+           <form onSubmit={updateQuantity}>
                <input type="number" name="quantity" id="" />
-               <input type="button" value="Add Quantity" />
+               <input type="submit" value="Add Quantity" />
            </form>
         </div>
     );
