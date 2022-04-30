@@ -6,7 +6,7 @@ const ManageCard = ({ man }) => {
     const handleUserDelete = (id) => {
         const proceed = window.confirm('are you sure you want to delete?')
         if (proceed) {
-            const url = `http://localhost:5000/items/${id}`;
+            const url = `https://fast-citadel-60509.herokuapp.com/items/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

@@ -14,7 +14,7 @@ const AddItem = () => {
         const item = {name, price, quantity, description,img, supplier};
         
         // send data
-        fetch('http://localhost:5000/items', {
+        fetch('https://fast-citadel-60509.herokuapp.com/items', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

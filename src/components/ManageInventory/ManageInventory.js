@@ -10,7 +10,7 @@ const ManageInventory = () => {
         navigate('/addItems')
     }
     useEffect(()=>{
-        fetch('http://localhost:5000/items/')
+        fetch('https://fast-citadel-60509.herokuapp.com/items/')
         .then(res => res.json())
         .then(data => setManage(data))
     },[])

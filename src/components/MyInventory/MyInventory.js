@@ -7,7 +7,7 @@ const MyInventory = () => {
     const [itemsId, setItemsId] = useState({});
     const [quantity, setQuantity] = useState({});
     useEffect(() => {
-        const url = `http://localhost:5000/items/${inventoryId}`;
+        const url = `https://fast-citadel-60509.herokuapp.com/items/${inventoryId}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setItemsId(data))
@@ -21,7 +21,7 @@ const MyInventory = () => {
         }
 
 
-        fetch(`http://localhost:5000/items/${inventoryId}`, {
+        fetch(`https://fast-citadel-60509.herokuapp.com/items/${inventoryId}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
