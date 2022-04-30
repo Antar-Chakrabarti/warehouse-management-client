@@ -1,9 +1,16 @@
 import './Cart.css';
 import { useNavigate } from 'react-router-dom';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
+import { Spinner } from 'react-bootstrap';
 const Cart = ({car}) => {
     const navigate = useNavigate();
     const handleNavigate =()=>{
         navigate(`/inventory/${car._id}`)
+    }
+    const [user, loading, error] = useAuthState(auth);
+    if (loading) {
+        return <Spinner animation="border" variant="info" />
     }
     return (
         <div className="cart">
