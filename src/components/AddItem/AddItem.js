@@ -8,10 +8,23 @@ const AddItem = () => {
         const price = e.target.price.value;
         const quantity = e.target.quantity.value;
         const description = e.target.description.value;
+        const img = e.target.photoUrl.value;
         const supplier = e.target.supplier.value;
 
-        const item = {name, price, quantity, description, supplier};
-        console.log(item)
+        const item = {name, price, quantity, description,img, supplier};
+        
+        // send data
+        fetch('http://localhost:5000/items', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(item)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log('success', data)
+        })
     }
     return (
         <div>

@@ -23,7 +23,7 @@ const ManageCard = ({ man }) => {
 
         <div className='manage-card'>
             <h4>{man.name}</h4>
-            <img style={{ width: '30px' }} src={man.img} alt="" />
+            <img style={{ width: '70px' }} src={man.img} alt="" />
             <button onClick={() => handleUserDelete(man._id)}>Delete</button>
         </div>
     );
