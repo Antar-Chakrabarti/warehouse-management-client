@@ -5,7 +5,6 @@ const Cart = ({car}) => {
     const handleNavigate =()=>{
         navigate(`/inventory/${car._id}`)
     }
-    console.log(car)
     return (
         <div className="cart">
             <img src={car.img} alt="" />

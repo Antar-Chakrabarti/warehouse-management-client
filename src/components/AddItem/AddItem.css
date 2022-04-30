@@ -1,0 +1,9 @@
+.addItemsForm{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.addItemsForm input{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 40px;
+}

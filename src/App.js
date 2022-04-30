@@ -10,6 +10,7 @@ import MyInventory from './components/MyInventory/MyInventory';
 import RequireAuth from './components/RequireAuth/RequireAuth';
 import ManageInventory from './components/ManageInventory/ManageInventory';
 import Blog from './components/Blog/Blog';
+import AddItem from './components/AddItem/AddItem';
 
 function App() {
   return (
@@ -30,6 +31,11 @@ function App() {
           </RequireAuth>
         }/>
         <Route path='/blog' element={<Blog/>}/>
+        <Route path='/addItems' element={
+          <RequireAuth>
+            <AddItem />
+          </RequireAuth>
+        }/>
       </Routes>
       <Footer />
     </div>
